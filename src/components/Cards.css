@@ -1,0 +1,219 @@
+.cards {
+  padding: 4rem;
+  background: #fff;
+  transition: 250ms
+}
+h1 {
+  color: #1f82cee7;
+  text-align: center;
+  font-family: 'Patrick Hand', cursive;
+  font-size:2rem
+}
+
+.cards__container {
+  margin: 5px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,360px));
+  grid-gap: 20px;
+  flex-flow: column;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1120px;
+  width: 100%;
+  
+}
+
+.cards__wrapper {
+  position: relative;
+  margin: 30px 0 10px;
+}
+
+.cards__items {
+  margin-bottom: 10px;
+}
+
+.cards__item {
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.cards__item__link {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  box-shadow: 0 7px 22px rgba(56, 126, 255, 0.344);
+  -webkit-filter: drop-shadow(0 7px 22px rgba(56, 126, 255, 0.268));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 67%;
+  overflow: hidden;
+}
+
+.fade-img {
+  animation-name: fade-img;
+  animation-duration: 3s;
+}
+
+.cards__item__pic-wrap::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  padding: 6px 8px;
+  max-width: calc((100%) - 60px);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #387fe9;
+  box-sizing: border-box;
+}
+
+.cards__item__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all 0.5s linear;
+}
+
+.cards__item__img:hover {
+  transform: scale(1.1);
+}
+
+.cards__item__info {
+  padding: 20px 30px 30px;
+}
+
+.cards__item__text {
+  color: #19507bf0;
+  word-break: keep-all;
+  font-size: 15px;
+  line-height: 24px;
+  margin-inline: auto ; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageNumbers {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto ; 
+}
+
+.pageNumbers li {
+  padding: 15px;
+  border: none;
+}
+.pageNumbers li button.active {
+  background-color: rgba(255, 255, 255, 0.816);
+  font-size: 1.6rem;
+  color: #2c2828;
+}
+.pageNumbers li button {
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.816);
+  color: rgb(155, 153, 153)
+}
+.pageNumbers li button:hover {
+  background-color: rgba(255, 255, 255, 0.816);
+  font-size: bold;
+  color: #2c2828;
+}
+.pageNumbers li button:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.83);
+  color: #2c2828;
+}
+.loadmore {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  color: rgb(155, 153, 153);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.tagFilter { 
+  justify-content: center;
+  align-items: center;
+  display: flex; 
+  margin: 30px
+}
+
+.tagFilter button {
+  border: 1.7px solid rgb(143, 137, 137);
+  border-radius: 8px;
+  padding: 5px;
+  margin: 7px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.816);
+  color: rgb(143, 137, 137);
+}
+
+.tagFilter button:focus {
+  outline: none;
+  border: 1.7px solid #fff;
+  background: linear-gradient(45deg, #FE6B8B 30%, #fd8544 90%);
+  color: #fff;
+  box-shadow: 0 2px 6px #ff093fd7;
+}
+
+@media only screen and (min-width: 1200px) {
+  .content__blog__container {
+    width: 80%;
+      margin-inline: auto ;
+  }
+}
+
+/* @media only screen and (min-width: 1024px) {
+  .cards__items {
+    display: flex;
+    margin-inline: auto ;
+  }
+} */
+
+@media only screen and (max-width: 1024px) {
+  .cards__item {
+    margin-bottom: 2rem;
+  }
+  .cards__item__text {
+    font-size: 14px;
+    margin-inline: auto ;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cards__container {
+    margin: 2px;
+    display: grid;
+    margin-inline: auto ;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+  }
+}

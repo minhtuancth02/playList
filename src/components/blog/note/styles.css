@@ -1,0 +1,12 @@
+.note {
+   position: relative;
+   padding: 24px 32px;
+   font-size: 17px;
+   margin: 48px 0 64px;
+   border-left-style: 3px;
+   border-left-width: 3px;
+   border-radius: 6px 6px 6px 3px;
+   background: lightblue;
+   border-color: hsl(250deg, 100%, 50%);
+   transition: background 350ms ease 0s;
+}
