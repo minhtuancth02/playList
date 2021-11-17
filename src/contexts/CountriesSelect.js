@@ -16,7 +16,7 @@ const Reducer = (state, action) => {
    switch (action.type) {
       case 'name': {
          const objSelect = state.find(
-            (country) => country["name"] === action.payLoad
+            (country) => country['name'] === action.payLoad
          );
          return [objSelect];
       }
